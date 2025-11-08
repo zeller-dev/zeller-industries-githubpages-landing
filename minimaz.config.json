@@ -1,0 +1,24 @@
+{
+    "src": "src",
+    "dist": "dist",
+    "public": "public",
+    "minify": {
+        "html": true,
+        "css": true,
+        "js": true
+    },
+    "replace": {
+        "../public/": "public/",
+        "<link rel=\"stylesheet\" href=\"../node_modules/bootstrap-icons/font/bootstrap-icons.css\" />": "",
+        "\"fonts/bootstrap-icons.woff2": "\"/public/fonts/bootstrap-icons.woff2",
+        "\"fonts/bootstrap-icons.woff": "\"/public/fonts/bootstrap-icons.woff"
+    },
+    "styles": [
+        "node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
+    ],
+    "folders": {
+        "public": "public",
+        "src": "",
+        "node_modules/bootstrap-icons/font/fonts": "public/fonts"
+    }
+}

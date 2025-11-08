@@ -1,0 +1,376 @@
+/* ========================================
+   ZELLER INDUSTRIES — Main Stylesheet
+   Modern, responsive, minimal, dark theme
+======================================== */
+
+/* ------------------------------
+   FONT
+------------------------------ */
+@font-face {
+    font-family: 'Orbitron';
+    src: url('../public/fonts/orbitron_semibold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ------------------------------
+   ROOT VARIABLES
+------------------------------ */
+:root {
+    color-scheme: dark;
+
+    /* COLORS */
+    --clr-primary: #cc6600;
+    --clr-primary-hover: #e67300;
+    --clr-accent: #0077b6;
+    --clr-accent-hover: #0099cc;
+    --clr-bg-main: #111111;
+    --clr-bg-alt: #0a0a0b;
+    --clr-surface: rgba(255, 255, 255, 0.05);
+    --clr-surface-hover: rgba(255, 255, 255, 0.12);
+    --clr-text-main: #eeeeee;
+    --clr-text-muted: #bbbbbb;
+    --clr-border: rgba(255, 255, 255, 0.08);
+
+    /* FONT */
+    --font-display: 'Orbitron', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+
+    /* FONT SIZE */
+    --fs-base: 1rem;
+    --fs-sm: clamp(0.85rem, 1.5vw, 0.95rem);
+    --fs-md: clamp(1rem, 2vw, 1.1rem);
+    --fs-lg: clamp(1.6rem, 3vw, 2rem);
+    --fs-xl: clamp(2rem, 5vw, 3rem);
+
+    /* SPACING */
+    --space-2xs: 0.25rem;
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2.5rem;
+    --space-xl: clamp(3rem, 6vw, 5rem);
+
+    /* RADIUS */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+
+    /* TRANSITIONS */
+    --ease: cubic-bezier(0.4, 0, 0.2, 1);
+    --t-fast: 0.2s var(--ease);
+
+    /* LAYOUT */
+    --content-max-width: 1200px;
+    --section-padding-y: var(--space-xl);
+    --section-padding-x: 2rem;
+}
+
+/* ------------------------------
+   RESET & BASE
+------------------------------ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: var(--fs-base);
+    color: var(--clr-text-main);
+    background-color: var(--clr-bg-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    border-radius: var(--radius-md);
+}
+
+a {
+    color: var(--clr-accent);
+    text-decoration: none;
+    transition: color var(--t-fast);
+}
+
+a:hover,
+a:focus {
+    color: var(--clr-primary);
+}
+
+.logo-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+}
+
+/* ------------------------------
+   HEADER / HERO
+------------------------------ */
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: calc(var(--section-padding-y) * 0.8) var(--section-padding-x);
+    background: radial-gradient(circle at 30% 30%, #1a1a1a, #0b0b0b 70%);
+}
+
+#site-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: var(--space-sm);
+    border-radius: var(--radius-sm);
+    transition: transform var(--t-fast);
+}
+
+#site-logo:hover {
+    transform: scale(1.1);
+}
+
+#site-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    color: var(--clr-primary);
+    margin-bottom: var(--space-sm);
+
+    white-space: nowrap;
+    text-overflow: clip;
+}
+
+
+#hero-tagline {
+    font-size: var(--fs-md);
+    color: var(--clr-accent);
+    margin-bottom: var(--space-sm);
+}
+
+/* ------------------------------
+   SECTIONS: SERVICES / PORTFOLIO / CONTACT
+------------------------------ */
+section {
+    padding: var(--section-padding-y) var(--section-padding-x);
+    background-color: var(--clr-bg-alt);
+    border-top: 1px solid var(--clr-border);
+}
+
+h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    color: var(--clr-primary);
+    text-align: center;
+    margin-bottom: var(--space-md);
+}
+
+p {
+    color: var(--clr-text-muted);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--space-md);
+}
+
+/* ------------------------------
+   SERVICES GRID
+------------------------------ */
+#services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-md);
+    list-style: none;
+    padding: 0;
+    margin-top: var(--space-lg);
+}
+
+#services-list li {
+    background: var(--clr-surface);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+    transition: transform var(--t-fast), background var(--t-fast);
+}
+
+#services-list li:hover {
+    background: var(--clr-surface-hover);
+    transform: translateY(-3px);
+}
+
+#services-list li i {
+    font-size: 1.5rem;
+    color: var(--clr-primary);
+    flex-shrink: 0;
+}
+
+#services-list .service-desc {
+    display: block;
+    font-size: var(--fs-sm);
+    color: var(--clr-text-muted);
+    margin-top: 0.5rem;
+    text-align: left;
+}
+
+.service-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+/* ------------------------------
+   CONTACT (Linktree style)
+------------------------------ */
+#contact-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+}
+
+.contact-link {
+    width: min(320px, 90%);
+    text-align: center;
+    background: var(--clr-surface);
+    color: var(--clr-text-main);
+    padding: var(--space-sm);
+    border-radius: var(--radius-md);
+    font-size: var(--fs-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+    transition: background var(--t-fast), transform var(--t-fast);
+    border: 1px solid var(--clr-border);
+}
+
+.contact-link:hover {
+    background: var(--clr-surface-hover);
+    transform: translateY(-2px);
+    color: var(--clr-primary);
+}
+
+.contact-link i {
+    font-size: 1.2rem;
+    color: var(--clr-primary);
+}
+
+
+/* ------------------------------
+   PORTFOLIO GRID
+------------------------------ */
+#portfolio-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+    list-style: none;
+    padding: 0;
+    margin-top: var(--space-lg);
+}
+
+.portfolio-item {
+    background: var(--clr-surface);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: transform var(--t-fast), box-shadow var(--t-fast);
+
+}
+
+.portfolio-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.portfolio-item p {
+    padding: var(--space-sm);
+    text-align: center;
+}
+
+.portfolio-item img {
+    width: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform var(--t-fast);
+}
+
+
+.portfolio-item:hover img {
+    transform: scale(1.05);
+}
+
+
+/* ------------------------------
+   CONTACT
+------------------------------ */
+#contact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-md);
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+.socials a {
+    font-size: 1.5rem;
+    color: var(--clr-text-muted);
+    transition: color var(--t-fast), transform var(--t-fast);
+}
+
+.socials a:hover {
+    color: var(--clr-primary);
+    transform: scale(1.2);
+}
+
+/* ------------------------------
+   FOOTER
+------------------------------ */
+#site-footer {
+    text-align: center;
+    padding: var(--space-md);
+    background-color: var(--clr-bg-alt);
+    border-top: 1px solid var(--clr-border);
+    color: var(--clr-text-muted);
+}
+
+/* ------------------------------
+   RESPONSIVE
+------------------------------ */
+@media (max-width: 768px) {
+    #services-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    #portfolio-list {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    #hero {
+        padding: var(--space-sm);
+    }
+}
