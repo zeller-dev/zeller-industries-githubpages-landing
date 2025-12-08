@@ -10,8 +10,8 @@
     "replace": {
         "../public/": "public/",
         "<link rel=\"stylesheet\" href=\"bootstrap-icons.css\" />": "",
-        "\"fonts/bootstrap-icons.woff2": "\"/public/fonts/bootstrap-icons.woff2",
-        "\"fonts/bootstrap-icons.woff": "\"/public/fonts/bootstrap-icons.woff"
+        "../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": "/public/fonts/bootstrap-icons.woff2",
+        "../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": "/public/fonts/bootstrap-icons.woff"
     },
     "folders": {
         "public": "public",
