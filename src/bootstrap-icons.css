@@ -57,3 +57,15 @@
 .icon.whatsapp::before {
     content: "\f618";
 }
+
+.icon.lightbulb::before {
+    content: "\f46b";
+}
+
+.icon.cart::before{
+    content: "\f23D";
+}
+
+.icon.person::before{
+    content: "\F4DD";
+}
