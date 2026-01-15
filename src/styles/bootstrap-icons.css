@@ -1,8 +1,8 @@
 @font-face {
     font-display: block;
     font-family: "bootstrap-icons";
-    src: url("../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2") format("woff2"),
-        url("../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff") format("woff");
+    src: url("../../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2") format("woff2"),
+        url("../../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff") format("woff");
 }
 
 .icon::before,
@@ -59,13 +59,17 @@
 }
 
 .icon.lightbulb::before {
-    content: "\f46b";
+    content: "\F468";
 }
 
-.icon.cart::before{
+.icon.cart::before {
     content: "\f23D";
 }
 
-.icon.person::before{
+.icon.person::before {
     content: "\F4DD";
+}
+
+.icon.telephone::before {
+    content: "\F5B4";
 }

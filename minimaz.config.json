@@ -8,10 +8,16 @@
         "js": true
     },
     "replace": {
-        "../public/": "public/",
-        "<link rel=\"stylesheet\" href=\"bootstrap-icons.css\" />": "",
-        "../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": "/public/fonts/bootstrap-icons.woff2",
-        "../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": "/public/fonts/bootstrap-icons.woff"
+        "../public/": "/public/",
+        "../../public/": "/public/",
+        "<link rel=\"stylesheet\" href=\"/styles/bootstrap-icons.css\" />": "",
+        "<link rel=\"stylesheet\" href=\"/styles/flags.css\" />": "",
+        "<link rel=\"stylesheet\" href=\"/styles/prefers.css\" />": "",
+        "../../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": "/public/fonts/bootstrap-icons.woff2",
+        "../../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": "/public/fonts/bootstrap-icons.woff",
+        "<!--gtag.js-->": "<script async src='https://www.googletagmanager.com/gtag/js?id=G-MPNZMBRBL9'></script><script>window.dataLayer = window.dataLayer || [];function gtag() { dataLayer.push(arguments); }gtag('js', new Date());gtag('config', 'G-MPNZMBRBL9');</script>",
+        "<!--iubenda.js/head-->": "<script type='text/javascript' src='https://embeds.iubenda.com/widgets/6ec11849-4abf-4dea-b131-abb39ab41538.js'></script>",
+        "<!--iubenda.js/body-->": "<script type='text/javascript'>(function (w, d) { var loader = function () { var s = d.createElement('script'), tag = d.getElementsByTagName('script')[0]; s.src = 'https://cdn.iubenda.com/iubenda.js'; tag.parentNode.insertBefore(s, tag); }; if (w.addEventListener) { w.addEventListener('load', loader, false); } else if (w.attachEvent) { w.attachEvent('onload', loader); } else { w.onload = loader; } })(window, document);</script>"
     },
     "folders": {
         "public": "public",
