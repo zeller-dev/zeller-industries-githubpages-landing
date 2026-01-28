@@ -14,11 +14,11 @@
   "homepage": "https://github.com/zeller-dev/zeller-industries-githubpages-landing#readme",
   "devDependencies": {
     "bootstrap-icons": "^1.13.1",
-    "live-server": "^1.2.2",
-    "minimaz-cli": "^0.2.1"
+    "minimaz-cli": "latest",
+    "serve": "^14.2.5"
   },
   "scripts": {
     "build": "npx mz b",
-    "test": "npm run build && npx live-server ./dist"
+    "test": "npm run build && npx serve ./dist"
   }
 }
